@@ -12,11 +12,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.s?[ac]ss/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,6 +38,9 @@ module.exports = {
     host: 'localhost',
     port: port,
     historyApiFallback: true,
-    open: true
+    open: true,
+    client: {
+      overlay: true
+    }
   }
 };
