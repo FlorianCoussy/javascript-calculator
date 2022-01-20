@@ -1,1 +1,1 @@
-console.log('JavaScript Calculator');
+document.getElementById('root').innerText = 'JavaScript Calculator';
