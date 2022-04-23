@@ -1,0 +1,11 @@
+@import '../../constants.scss';
+
+#calculator {
+  height: 610px;
+  width: 300px;
+  border-radius: 45px;
+  padding: 15px;
+  padding-bottom: 45px;
+  background: linear-gradient(135deg, $dark-grey, darken($dark-grey, 18%));
+  box-shadow: 25px 25px 20px 5px rgba(0,0,0,.25);
+}

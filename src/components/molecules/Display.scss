@@ -1,0 +1,18 @@
+@import '../../constants.scss';
+
+#display {
+  margin-top: 65px;
+  text-align: right;
+
+  #statement {
+    margin-right: 10px;
+    margin-bottom: 4px;
+    color: lighten($grey, 8%);
+    font-size: 1.2em;
+  }
+
+  #result {
+    margin-right: 7px;
+    font-size: 3.2em;
+  }
+}
