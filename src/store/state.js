@@ -1,6 +1,7 @@
 const initialState = {
   isLoading: false,
   calculator: {
+    statement: '',
     value: 0,
   }
 };

@@ -3,7 +3,7 @@ const fakeLoading = (loading, loadingSuccess) => {
 
   setTimeout(
     () => loadingSuccess(),
-    2500
+    3500
   );
 };
 

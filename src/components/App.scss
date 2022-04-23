@@ -1,13 +1,120 @@
+@import '../constants.scss';
+
 #root {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: $white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: linear-gradient(135deg, $grey-light, darken($grey-light, 18%));
+  box-shadow: inset 0 0 60px rgba(0,0,0,.25);
   user-select: none;
 }
 
 button {
-  border: 1px solid grey;
-  padding: 4px 12px;
+  width: 60px;
+  border-radius: 15px;
+  padding: 15px 18px;
+  font-size: 1.5em;
+  text-align: center;
+  background: $grey;
   cursor: pointer;
+
+  span {
+    position: relative;
+    top: 0;
+    transition: .15s top;
+  }
+
+  &:active {
+    span {
+      top: 3px;
+    }
+  }
+}
+
+#calculator {
+  height: 610px;
+  width: 300px;
+  border-radius: 45px;
+  padding: 15px;
+  padding-bottom: 45px;
+  background: linear-gradient(135deg, $dark-grey, darken($dark-grey, 18%));
+  box-shadow: 25px 25px 20px 5px rgba(0,0,0,.25);
+
+  #screen {
+    margin-top: 65px;
+    text-align: right;
+
+    #statement {
+      margin-right: 10px;
+      margin-bottom: 4px;
+      color: lighten($grey, 8%);
+      font-size: 1.2em;
+    }
+
+    #display {
+      margin-right: 7px;
+      font-size: 3.2em;
+    }
+  }
+
+  #keypad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+
+    #clear {
+      width: 200px;
+      order: 0;
+    }
+
+    #divide {
+      order: 1;
+    }
+
+    #seven, #eight, #nine {
+      order: 2;
+    }
+
+    #multiply {
+      order: 3;
+    }
+
+    #six, #four, #five {
+      order: 4;
+    }
+
+    #subtract {
+      order: 5;
+      span {
+        display: inline-block;
+        transform: scale(2,1);
+      }
+    }
+
+    #three, #two, #one {
+      order: 6;
+    }
+
+    #add {
+      order: 7;
+    }
+
+    #zero {
+      width: 130px;
+      order: 8;
+    }
+
+    #decimal {
+      order: 9;
+    }
+
+    #equals {
+      order: 10;
+    }
+  }
 }
